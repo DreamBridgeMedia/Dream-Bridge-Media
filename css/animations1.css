@@ -1,0 +1,63 @@
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.circle {
+    animation: float 6s ease-in-out infinite;
+}
+
+.square {
+    animation: rotate 10s linear infinite;
+}
+
+.triangle {
+    animation: float 8s ease-in-out infinite;
+}
+
+.role-card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.role-icon i {
+    transition: transform 0.3s ease;
+}
+
+.role-card:hover .role-icon i {
+    transform: scale(1.2);
+}
+
+.hero h1 {
+    animation: fadeIn 1s ease-out;
+}
+
+.hero p {
+    animation: fadeIn 1s ease-out 0.3s backwards;
+}

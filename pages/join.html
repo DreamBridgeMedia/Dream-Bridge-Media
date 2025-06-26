@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamBridge Media - Empowering Talents. Elevating Brands. Creating Legacy.</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="DreamBridge Media is a full-service digital entertainment company specializing in talent management, influencer marketing, content production, and brand partnerships.">
+    <meta name="keywords" content="talent management, influencer marketing, content production, brand partnerships, digital entertainment, creator economy">
+    <meta name="author" content="DreamBridge Media">
+    <meta property="og:title" content="DreamBridge Media - Full-Service Digital Entertainment Company">
+    <meta property="og:description" content="Empowering Talents. Elevating Brands. Creating Legacy.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dreambridgemedia.in">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DreamBridge Media">
+    <meta name="twitter:description" content="Empowering Talents. Elevating Brands. Creating Legacy.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'heading': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'dream-purple': '#6366f1',
+                        'dream-pink': '#ec4899',
+                        'dream-blue': '#06b6d4',
+                        'dream-gold': '#f59e0b',
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles1.css">
+    <link rel="stylesheet" href="../css/animations1.css">
+    
+    <script src="../js/animations.js"></script>
+    <script defer src="../js/theme.js"></script>
+</head>
+<body class="light-mode">
+
+    <!-- Bridge Background Canvas -->
+    <canvas id="bridge-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
+    
+    <!-- Stars Background -->
+    <div id="stars" class="fixed inset-0 w-full h-full pointer-events-none z-0"></div>
+    
+    <!-- Cursor Trail -->
+    <div id="cursor-trail" class="fixed pointer-events-none z-50"></div>
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/20 dark:border-gray-700/20 transition-all duration-500">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4" onclick="window.location.href='../pages/index.html'">
+                    <img src="../assets/MainLogo.png" alt="DreamBridge Media" class="h-10 w-auto">
+                    <span class="text-xl font-heading font-bold text-dream-purple">DreamBridge Media</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-dream-purple transition-colors">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-dream-purple transition-colors">About</a>
+                    <a href="services.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-dream-purple transition-colors">Services</a>
+                    <a href="contact.html" class="nav-link text-dream-purple font-semibold">Contact</a>
+                    <a href="join.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-dream-purple transition-colors">Jobs</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Theme Toggle -->
+                        <div class="theme-toggle">
+                            <button id="themeToggle">
+                                <i class="fas fa-moon"></i>
+                                <i class="fas fa-sun"></i>
+                            </button>
+                        </div>
+                    
+                    <!-- Mobile Menu Toggle
+                    <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg bg-gray-200 dark:bg-gray-700">
+                        <i class="fas fa-bars"></i>
+                    </button> -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-6 py-4 space-y-4">
+                <a href="index.html" class="block text-gray-700 dark:text-gray-300 hover:text-dream-purple">Home</a>
+                <a href="about.html" class="block text-gray-700 dark:text-gray-300 hover:text-dream-purple">About</a>
+                <a href="services.html" class="block text-gray-700 dark:text-gray-300 hover:text-dream-purple">Services</a>
+                <a href="contact.html" class="block text-dream-purple font-semibold">Contact</a>
+                <a href="join.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-dream-purple transition-colors">Jobs</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Header -->
+    <header class="main-header">
+        <h1>DreamBridge Media</h1>
+        
+    </header>
+
+    <header class="hero">
+        <h1>DreamBridge Media</h1>
+        <div class="art-container">
+            <div class="circle"></div>
+            <div class="square"></div>
+            <div class="triangle"></div>
+        </div>
+        <h1>Join Our Team</h1>
+        <p>Be part of something extraordinary</p>
+    </header>
+
+    <main>
+        <section class="roles-grid">
+            <div class="role-card">
+                <div class="role-icon"><i class="fas fa-handshake"></i></div>
+                
+                <h3> Currently, we don't have any opening but you can check frequently for updates. Thank you.</h3>
+            </div>
+
+        </section>
+        <div class="role-card">
+                <div class="role-icon"><I><b><u>Note:</u></b></i></div>
+                <h3>We also encourage passionate individuals to apply for different open roles. If you really want to work with us, or gain experience, just come and apply, even if you do not fulfil any requirements. Thank you.</h3>
+                <p>Best of Luck.</p>
+            </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative bg-gray-900 dark:bg-black text-white py-16 z-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="../assets/MainLogo.png" alt="DreamBridge Media" class="h-12 w-auto">
+                        <span class="text-2xl font-heading font-bold">DreamBridge Media</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Empowering Talents. Elevating Brands. Creating Legacy.
+                    
+                        <p class="text-gray-500 italic">
+                            "Ohhh… just like that, a bridge got built – a DreamBridge! 😆"
+                        </p>
+                        <p><strong>Contact : </strong>contact@dreambridgemedia.in</p>
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html#talent-management" class="hover:text-dream-purple transition-colors">Talent Management</a></li>
+                        <li><a href="services.html#influencer-marketing" class="hover:text-dream-purple transition-colors">Influencer Marketing</a></li>
+                        <li><a href="services.html#content-production" class="hover:text-dream-purple transition-colors">Content Production</a></li>
+                        <li><a href="services.html#brand-strategy" class="hover:text-dream-purple transition-colors">Brand Strategy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-dream-purple transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-dream-purple transition-colors">Contact</a></li>
+                        <li><a href="legal.html" class="hover:text-dream-purple transition-colors">Legal</a></li>
+                        <li><a href="terms.html" class="hover:text-dream-purple transition-colors">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2025 DreamBridge Media. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="https://www.instagram.com/dreambridge.media/" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://youtube.com/@dreambridge-media?si=PjMEeRAZiU1YA4ta" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dreambridge-media" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://x.com/DreamBridgeM?t=MyayBaqWYIBngdS0k20zPA&s=08" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/DreamBridgeMedia?rdid=TCPnpbcr5nYmdWxr&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CBznoBxjW%2F" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="mailto:contact@dreambridgemedia.in" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                        <a href="https://linktr.ee/dreambridgemedia" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fas fa-link text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
