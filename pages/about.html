@@ -309,7 +309,38 @@
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-4" onclick="window.location.href='../pages/index.html'">
                     <img src="../assets/MainLogo.png" alt="DreamBridge Media" class="h-10 w-auto">
-                    <span class="text-xl font-heading font-bold text-dream-purple">DreamBridge Media</span>
+                    <!-- Replaced span with styled span group -->
+                    <span class="text-xl font-heading font-bold flex items-center space-x-1">
+                        <span class="gradient-logo-inline">DreamBridge</span>
+                        <span class="media-outline-inline">Media</span>
+                    </span>
+
+                    <!-- Embedded styles -->
+                    <style>
+                        .gradient-logo-inline {
+                        background: linear-gradient(to right,
+                            #007CF0,  /* Blue */
+                            #5A3EFF,  /* Indigo */
+                            #7928CA,  /* Purple */
+                            #D946EF,  /* Pink */
+                            #FB923C,  /* Orange */
+                            #FACC15   /* Golden Yellow */
+                        );
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        display: inline-block;
+                        }
+
+                        .media-outline-inline {
+                        color: white;
+                        text-shadow:
+                            -1px -1px 0 #000,
+                            1px -1px 0 #000,
+                            -1px  1px 0 #000,
+                            1px  1px 0 #000;
+                        display: inline-block;
+                        }
+                    </style>
                 </div>
                 
                 <div class="hidden md:flex items-center space-x-8">
